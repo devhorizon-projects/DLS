@@ -1,0 +1,57 @@
+{
+  "name": "@devhorizon/dls",
+  "version": "1.0.0",
+  "description": "DevHorizon Enterprise Design Language System (DLS) - Luxury Dark Obsidian & Metallic Silver UI Library",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css",
+    "dist/style.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.js"
+    },
+    "./llms.txt": "./llms.txt",
+    "./ai": "./AI_GUIDE.md"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "AI_GUIDE.md",
+    "llms.txt"
+  ],
+  "scripts": {
+    "build": "vite build --config vite.config.ts && tsc --emitDeclarationOnly --declaration --project tsconfig.build.json",
+    "lint": "eslint src"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.400.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "react-router-dom": ">=6.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "keywords": [
+    "design-system",
+    "dls",
+    "react",
+    "tailwind",
+    "devhorizon",
+    "atlas-ui",
+    "luxury-dark",
+    "silver-metallic"
+  ],
+  "author": "DevHorizon Technologies Private Limited",
+  "license": "UNLICENSED"
+}

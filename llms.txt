@@ -1,0 +1,142 @@
+# @devhorizon/dls - LLM Documentation & Vibe-Coding Cheat Sheet
+> Version: 1.0.0
+> Designed for DevHorizon & AI-Assisted "Vibe Coding" (Cursor, Windsurf, Claude, Copilot, v0)
+
+## Quick Summary
+@devhorizon/dls is an enterprise Design Language System (DLS) built on React, TypeScript, and Tailwind CSS. It delivers a high-end luxury dark aesthetic inspired by WellSky Atlas, Linear, and Apple, featuring deep obsidian surfaces (#111315), shining brushed chrome metallic accents (#E8EAED), and architectural pure white contrast zones (#FFFFFF).
+
+---
+
+## 1. Installation & Imports
+```tsx
+import {
+  DlsButton,
+  DlsBadge,
+  DarkSurfaceCard,
+  WhiteServiceCard,
+  DlsLogo,
+  StatItem,
+  ProcessTimeline,
+  colors,
+  gradients,
+} from "@devhorizon/dls";
+import "@devhorizon/dls/style.css";
+```
+
+---
+
+## 2. Color Palette Tokens
+| Token | Hex | Role | Usage |
+|---|---|---|---|
+| Primary Background | `#111315` | Canvas & dark viewports | Main section background |
+| Surface / Cards | `#24272B` | Containers & dark cards | Card panels, dialogs |
+| Surface Elevated | `#1A1C1F` | Elevated popovers | Floating menus, dropdowns |
+| Text Light | `#D4D8DE` | Primary legible copy | Headings, body text |
+| Shining Silver | `#E8EAED` | Metallic Primary Accent | Buttons, glow highlights |
+| Secondary Platinum | `#C0C5CC` | Secondary Accent | Subtitles, pill borders |
+| White Sections | `#FFFFFF` | Architectural contrast | Services & process grids |
+
+---
+
+## 3. Core Component Library
+
+### A. DevHorizonButton (DevHorizonTechButton / DlsButton)
+Used for all call-to-actions.
+- `variant="primary"`: Brushed silver metallic gradient with dark #111315 text, subtle bevel highlight, and hover glow.
+- `variant="secondary"`: Obsidian dark surface with refined silver border.
+- `variant="inverted"`: Dark button for placement inside white sections.
+- `variant="ghost"`: Transparent with silver hover state.
+- `size`: `"sm"` | `"md"` (default) | `"lg"`
+- `shape`: `"pill"` (default) | `"rounded"`
+- `showArrow`: boolean (renders smooth animated right arrow)
+
+```tsx
+// Primary CTA with Arrow
+<DevHorizonButton variant="primary" size="lg" showArrow>
+  Explore Our Services
+</DevHorizonButton>
+
+// Secondary Obsidian Action
+<DevHorizonButton variant="secondary" size="md">
+  Talk to Our Team
+</DevHorizonButton>
+```
+
+### B. DlsBadge
+Used for section overlines / eyebrow labels and status pills.
+- `variant`: `"silver"` (default) | `"dark"` | `"light"` | `"outline"`
+- `showDot`: boolean (renders animated pulsing dot)
+
+```tsx
+<DlsBadge variant="silver" showDot>
+  TECHNOLOGY • PEOPLE • IMPACT
+</DlsBadge>
+
+<DlsBadge variant="light">
+  OUR SERVICES
+</DlsBadge>
+```
+
+### C. DarkSurfaceCard
+Dark container card (#24272B) with 1px silver border highlight and hover lift.
+```tsx
+<DarkSurfaceCard hoverEffect={true}>
+  <h3 className="text-lg font-bold text-white mb-2">Cloud Infrastructure</h3>
+  <p className="text-sm text-[#8E95A0]">High-availability microservices.</p>
+</DarkSurfaceCard>
+```
+
+### D. WhiteServiceCard
+Architectural pure white card (#FFFFFF) with line icon, title, description, and "Learn More" arrow link.
+```tsx
+import { Code2 } from "lucide-react";
+
+<WhiteServiceCard
+  icon={<Code2 className="w-5 h-5" />}
+  title="Custom Software Development"
+  description="Tailored digital solutions built from the ground up for business goals."
+  linkText="Learn More"
+  onLinkClick={() => console.log("navigate")}
+/>
+```
+
+### E. StatItem
+Bold statistical metrics display.
+```tsx
+<StatItem
+  value="21+"
+  label="Team Members"
+  subtext="Driven by expertise"
+/>
+```
+
+### F. ProcessTimeline
+4-step horizontal or responsive delivery workflow.
+```tsx
+<ProcessTimeline
+  steps={[
+    { number: "01", title: "Discover", description: "Understand your goals and requirements." },
+    { number: "02", title: "Design", description: "Create scalable, user-centric solutions." },
+    { number: "03", title: "Develop", description: "Build with precision engineering." },
+    { number: "04", title: "Deliver", description: "Launch and support for long-term growth." },
+  ]}
+/>
+```
+
+### G. DlsLogo
+Official 3D metallic brushed chrome emblem and typography lockup.
+```tsx
+// Horizontal navbar lockup
+<DlsLogo size="md" variant="horizontal" asLink={true} to="/" />
+
+// Large display mark
+<DlsLogo size="lg" variant="full" />
+```
+
+---
+
+## 4. Vibe-Coding AI Rules & Constraints
+1. **Never use standard generic colors** (e.g., standard red, raw blue, bright purple). Stick strictly to the `@devhorizon/dls` tokens.
+2. **Contrast Rhythm**: Structure pages with dark obsidian heroes (`#111315`), followed by crisp pure white architectural feature sections (`#FFFFFF`), followed by dark showcase sections.
+3. **Typography**: Always use `font-sans` (Inter/Manrope). Use `tracking-tight` on headings and `tracking-[0.18em]` uppercase on eyebrows.
+4. **Icons**: Use `lucide-react` with 1.5px to 2px stroke width.
