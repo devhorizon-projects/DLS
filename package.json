@@ -30,7 +30,9 @@
     "llms.txt"
   ],
   "scripts": {
+    "dev": "vite --port 5175 --host",
     "build": "vite build --config vite.config.ts && tsc --emitDeclarationOnly --declaration --project tsconfig.build.json",
+    "preview": "vite preview --port 5175",
     "lint": "eslint src"
   },
   "peerDependencies": {
