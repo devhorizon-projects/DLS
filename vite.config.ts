@@ -32,11 +32,19 @@ export default defineConfig(({ command, mode }) => {
         formats: ["es", "cjs"],
       },
       rollupOptions: {
-        external: ["react", "react-dom", "react-router-dom", "lucide-react"],
+        external: [
+          "react",
+          "react-dom",
+          "react/jsx-runtime",
+          "react/jsx-dev-runtime",
+          "react-router-dom",
+          "lucide-react",
+        ],
         output: {
           globals: {
             react: "React",
             "react-dom": "ReactDOM",
+            "react/jsx-runtime": "jsxRuntime",
             "react-router-dom": "ReactRouterDOM",
             "lucide-react": "LucideReact",
           },

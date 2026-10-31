@@ -1,6 +1,7 @@
 {
   "name": "@devhorizon/dls",
   "version": "1.0.0",
+  "type": "module",
   "description": "DevHorizon Enterprise Design Language System (DLS) - Luxury Dark Obsidian & Metallic Silver UI Library",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -31,7 +32,7 @@
   ],
   "scripts": {
     "dev": "vite --port 5175 --host",
-    "build": "vite build --config vite.config.ts && tsc --emitDeclarationOnly --declaration --project tsconfig.build.json",
+    "build": "vite build --config vite.config.ts && tsc --emitDeclarationOnly --declaration --project tsconfig.build.json && cp dist/dls.css dist/style.css",
     "preview": "vite preview --port 5175",
     "lint": "eslint src"
   },
@@ -55,5 +56,20 @@
     "silver-metallic"
   ],
   "author": "DevHorizon Technologies Private Limited",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react-swc": "^4.3.3",
+    "autoprefixer": "^10.6.2",
+    "lucide-react": "^1.66.0",
+    "postcss": "^8.5.32",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
 }
