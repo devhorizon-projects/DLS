@@ -44,11 +44,11 @@ export const DevHorizonButton = React.forwardRef<HTMLButtonElement, DevHorizonBu
     // Shape styles
     const shapeStyles = shape === "pill" ? "rounded-full" : "rounded-xl";
 
-    // Size styles
+    // Size styles with enhanced height and prominent presence
     const sizeStyles = {
-      sm: "text-xs px-3.5 py-1.5 gap-2",
-      md: "text-sm px-5 py-2.5 gap-2.5",
-      lg: "text-base px-6 py-3.5 gap-3",
+      sm: "text-xs px-4 py-2.5 min-h-[38px] gap-2",
+      md: "text-sm px-6 py-3.5 min-h-[48px] gap-2.5",
+      lg: "text-base px-8 py-4.5 min-h-[58px] gap-3",
     }[size];
 
     // Variant styles
@@ -82,9 +82,9 @@ export const DevHorizonButton = React.forwardRef<HTMLButtonElement, DevHorizonBu
 
     // Trailing icon circle background styling
     const circleContainerSizes = {
-      sm: "w-4 h-4 p-0.5",
-      md: "w-5 h-5 p-1",
-      lg: "w-6 h-6 p-1.5",
+      sm: "w-5 h-5 p-1",
+      md: "w-6 h-6 p-1.5",
+      lg: "w-7 h-7 p-1.5",
     }[size];
 
     const circleContainerBg = {
